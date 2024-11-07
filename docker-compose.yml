@@ -1,6 +1,6 @@
 services:
   panel_azathoth2:
-    image: ghcr.io/erikapption/snowexplorer-fsdh:latest
+    image: docker pull ghcr.io/fsdh-dhsf/snowexplorer:latest
     container_name: snow_explorer
     restart: always
     ports:
@@ -12,3 +12,4 @@ services:
 # FSDH Config
 #      - datahub-blob:/data
       - ./data:/data
+      - ./SnowExplorer-V5.ipynb:/snowexplorer.ipynb
