@@ -1,6 +1,8 @@
+version: "3.3"
+
 services:
   panel_azathoth2:
-    image: docker pull ghcr.io/fsdh-dhsf/snowexplorer:latest
+    image: ghcr.io/fsdh-dhsf/snowexplorer:latest
     container_name: snow_explorer
     restart: always
     ports:
@@ -9,7 +11,5 @@ services:
       - SCORE_FILE=/data/score_snw_station_diff_alti_200_HRDPS_CaPA01_CaPA02_period_20191001_20220629.nc
       - SERIES_FILE=/data/series_snw_station_diff_alti_200_HRDPS_CaPA01_CaPA02_period_20191001_20220629.nc
     volumes:
-# FSDH Config
-#      - datahub-blob:/data
       - ./data:/data
       - ./SnowExplorer-V5.ipynb:/snowexplorer.ipynb
